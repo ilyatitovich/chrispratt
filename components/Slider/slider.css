@@ -1,0 +1,42 @@
+.slider-modal {
+    background-color: var(--color-dark-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-modal .btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.slider-modal .btn-text-inner {
+    color: var(--color-white);
+}
+
+.swiper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .swiper-slide {
+    width: 50%;
+} */
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+

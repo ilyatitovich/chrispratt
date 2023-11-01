@@ -1,0 +1,26 @@
+.mouse-pos-list-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-blue);
+    color: var(--color-white);
+    position: fixed;
+    z-index: 26;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.34, 1, 0.64, 1);
+}
+
+.mouse-pos-list-btn p {
+    font-size: 4px;
+    margin: 0;
+    line-height: unset;
+}
+
+.mouse-pos-list-btn.active-big {
+    transform: scale(4);
+}

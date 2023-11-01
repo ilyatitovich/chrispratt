@@ -1,0 +1,32 @@
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 799;
+    transform: translate(0, 0) rotate(0.001deg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--gap-padding) / 2) calc(var(--gap-padding) / 2);
+}
+
+@media screen and (max-width: 540px) {
+    .nav-bar {
+        padding: calc(var(--gap-padding) / 1) calc(var(--gap-padding) * 0.5)
+            calc(var(--gap-padding) / 1) calc(var(--gap-padding) * 0.33);
+    }
+
+    .nav-bar .links-wrap li {
+        display: none;
+    }
+
+    .nav-bar .links-wrap li:last-child {
+        display: block;
+    }
+}
+
+.logo {
+    mix-blend-mode: multiply;
+}
