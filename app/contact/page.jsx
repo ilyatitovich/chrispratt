@@ -14,7 +14,7 @@ export default function Contact() {
                             <div className="row once-in">
                                 <div className="flex-col">
                                     <h1>
-                                        Let's start a
+                                        Let&apos;s start a
                                         <span>project together</span>
                                     </h1>
                                 </div>
@@ -49,7 +49,7 @@ export default function Contact() {
                                                 className="label"
                                                 htmlFor="name"
                                             >
-                                                What's your name?
+                                                What&apos;s your name?
                                             </label>
                                             <input
                                                 className="field"
@@ -67,7 +67,7 @@ export default function Contact() {
                                                 className="label"
                                                 htmlFor="email"
                                             >
-                                                What's your email?
+                                                What&apos;s your email?
                                             </label>
                                             <input
                                                 className="field"

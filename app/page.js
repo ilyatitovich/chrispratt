@@ -200,7 +200,7 @@ export default function Home() {
                                 <div className="flex-col">
                                     <h4 className="span-lines">
                                         Celebrating moments in every frame.
-                                        Together, we'll redefine the art of
+                                        Together, we&apos;ll redefine the art of
                                         storytelling. No compromises, always
                                         capturing the extraordinary.
                                     </h4>

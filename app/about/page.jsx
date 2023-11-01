@@ -102,7 +102,7 @@ export default function About() {
                                         >
                                             <p className="is-inview about-text on-scroll">
                                                 I capture moments for clients
-                                                worldwide.With each project, I'm
+                                                worldwide.With each project, I&apos;m
                                                 driven to new heights, always
                                                 delivering exceptional quality.
                                             </p>
@@ -138,7 +138,7 @@ export default function About() {
                         <div className="container">
                             <div className="row">
                                 <div className="flex-col">
-                                    <h2>I'm proficient at</h2>
+                                    <h2>I&apos;m proficient at</h2>
                                 </div>
                             </div>
                             <div className="row">
@@ -244,7 +244,7 @@ export default function About() {
                                     <h2>
                                         icon Awards
                                         <br />
-                                        judge '16-23
+                                        judge &apos;16-23
                                     </h2>
                                     <p>
                                         It is with great pride and honor that I
