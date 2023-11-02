@@ -1,7 +1,7 @@
 "use client";
 import "./gallery.css";
 import { useState, useEffect } from "react";
-import { capitalizeWords } from "@/components/utils";
+import { capitalize } from "lodash";
 import { gsap } from "gsap";
 import Preloader from "@/components/Preloader/Preloader";
 import ImageGrid from "@/components/ImagesGrid/ImagesGrid";
@@ -16,7 +16,12 @@ export default function Gallery() {
     const [initialSlide, setInitialSlide] = useState(0);
 
     useEffect(() => {
-        setCurrent(window.location.href.split("#")[1] || "all works");
+        let currentFromUrl = window.location.href.split("#")[1];
+        if (currentFromUrl) {
+            currentFromUrl = decodeURIComponent(currentFromUrl);
+        }
+
+        setCurrent(currentFromUrl || "all works");
     }, []);
 
     useEffect(() => {
@@ -59,7 +64,7 @@ export default function Gallery() {
                             <div className="row">
                                 <div className="flex-col">
                                     <h1>
-                                        <span>{capitalizeWords(current)}</span>
+                                        <span>{capitalize(current)}</span>
                                     </h1>
                                 </div>
                             </div>
@@ -81,8 +86,13 @@ export default function Gallery() {
                         <MagneticBtn strength={20} strengthText={10}>
                             <span className="btn-text">
                                 <span className="btn-text-inner">
-                                    {capitalizeWords(current)}
-                                </span><span className={`triangle ${menuIsOpen ? "active" : ''}`}/>
+                                    {capitalize(current)}
+                                </span>
+                                <span
+                                    className={`triangle ${
+                                        menuIsOpen ? "active" : ""
+                                    }`}
+                                />
                             </span>
                         </MagneticBtn>
                     </div>

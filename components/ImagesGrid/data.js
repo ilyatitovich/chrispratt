@@ -32,5 +32,5 @@ export const images = {
     events: events,
     fashion: fashion,
     product: product,
-    "all works": [portraits, events, fashion, product].flat(),
+    "all works": [...portraits, ...events, ...fashion, ...product],
 };

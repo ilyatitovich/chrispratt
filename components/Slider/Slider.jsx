@@ -36,6 +36,7 @@ export default function Slider({ setSliderIsOpen, initialSlide, current }) {
                 loop={true}
                 pagination={{
                     clickable: true,
+                    dynamicBullets: true,
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}

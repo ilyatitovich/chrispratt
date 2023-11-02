@@ -1,5 +1,6 @@
 import "./gallery-menu.css";
 import MagneticBtn from "../MagneticBtn/MagneticBtn";
+import { capitalize } from "lodash";
 
 export default function GalleryMenu({ setMenuIsOpen, setCurrent }) {
     function handleClick(cur) {
@@ -9,21 +10,21 @@ export default function GalleryMenu({ setMenuIsOpen, setCurrent }) {
     }
 
     const links = [
-        "All Works",
-        "Portraits",
-        "Events",
-        "Fashion",
-        "Product",
+        "all works",
+        "portraits",
+        "events",
+        "fashion",
+        "product",
     ].map((el, i) => {
         return (
             <li
                 key={el}
                 className={`btn btn-link`}
-                onClick={() => handleClick(el.toLocaleLowerCase())}
+                onClick={() => handleClick(el)}
             >
                 <MagneticBtn strength={24} strengthText={12}>
                     <span className="btn-text">
-                        <span className="btn-text-inner">{el}</span>
+                        <span className="btn-text-inner">{capitalize(el)}</span>
                     </span>
                 </MagneticBtn>
             </li>

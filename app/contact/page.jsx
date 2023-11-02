@@ -1,3 +1,4 @@
+import "./contact.css";
 import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks/SocialLinks";
 import MagneticBtn from "@/components/MagneticBtn/MagneticBtn";
@@ -9,7 +10,7 @@ export default function Contact() {
             <Preloader text="Contact" />
             <main className="main no-touch">
                 <div className="main-wrap">
-                    <header className="section default-header contact-header theme-dark">
+                    <header className="contact-header theme-dark">
                         <div className="container medium">
                             <div className="row once-in">
                                 <div className="flex-col">

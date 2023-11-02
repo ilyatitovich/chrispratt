@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import MagneticBtn from "../MagneticBtn/MagneticBtn";
 import SocialLinks from "../SocialLinks/SocialLinks";
-import { capitalizeWords } from "../utils";
+import { capitalize } from "lodash";
 
 export default function SideMenu({ menuIsOpen }) {
     const path = usePathname();
@@ -20,7 +20,7 @@ export default function SideMenu({ menuIsOpen }) {
                     <Link href={`/${i > 0 ? el : ""}`}>
                         <span className="btn-text">
                             <span className="btn-text-inner">
-                                {capitalizeWords(el)}
+                                {capitalize(el)}
                             </span>
                         </span>
                     </Link>
