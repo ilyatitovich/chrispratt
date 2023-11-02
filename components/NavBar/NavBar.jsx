@@ -19,21 +19,17 @@ export default function NavBar() {
     return (
         <>
             <nav className="nav-bar">
-                <div className="credits-top">
-                    <div className="btn btn-link btn-left-top">
-                        <MagneticBtn strength={20} strengthText={10}>
-                            <Link href="/">
-                                <span className="btn-text logo">Chris Pratt</span>
-                            </Link>
-                        </MagneticBtn>
-                    </div>
+                <div className="btn btn-link btn-left-top">
+                    <MagneticBtn strength={20} strengthText={10}>
+                        <Link href="/">
+                            <span className="btn-text logo">Chris Pratt</span>
+                        </Link>
+                    </MagneticBtn>
                 </div>
-                <ul className="links-wrap">
-                    <BurgerBtn
-                        menuIsOpen={menuIsOpen}
-                        onClick={() => setMenuIsOpen(!menuIsOpen)}
-                    />
-                </ul>
+                <BurgerBtn
+                    menuIsOpen={menuIsOpen}
+                    onClick={() => setMenuIsOpen(!menuIsOpen)}
+                />
             </nav>
             <SideMenu menuIsOpen={menuIsOpen} />
         </>

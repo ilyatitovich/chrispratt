@@ -1,19 +1,34 @@
-.image-grid {
-    display: grid; 
-    grid-template-columns: 1fr; 
-    gap: 1em; 
+.gallery-tiles {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 6em;
 }
 
-@media(min-width: 30em) {
-    .image-grid {
-        grid-template-columns: 1fr 1fr; 
-        gap: 1.5em 1.5em; 
+.gallery-tiles .container {
+    padding-left: calc(var(--container-padding) * 0.75);
+    padding-right: calc(var(--container-padding) * 0.75);
+}
+
+.gallery-tile {
+    cursor: pointer;
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+@media (min-width: 30em) {
+    .images-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5em 1.5em;
     }
 }
 
-@media(min-width: 50em) {
-    .image-grid {
-        grid-template-columns: 1fr 1fr 1fr; 
-        gap: 1.5em 1.5em; 
+@media (min-width: 50em) {
+    .images-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5em 1.5em;
     }
 }

@@ -1,5 +1,5 @@
 "use client";
-import "./gallery-page.css";
+import "./gallery.css";
 import { useState, useEffect } from "react";
 import { capitalizeWords } from "@/components/utils";
 import { gsap } from "gsap";
@@ -51,10 +51,10 @@ export default function Gallery() {
 
     return (
         <>
-            <Preloader text="Gallery" />
+            <Preloader text={"Gallery"} />
             <main className="main no-touch">
                 <div className="main-wrap">
-                    <header className="section default-header about-header">
+                    <header className="section gallery-header">
                         <div className="container medium once-in">
                             <div className="row">
                                 <div className="flex-col">
@@ -73,7 +73,7 @@ export default function Gallery() {
                         current={current}
                     />
                 </div>
-                <nav className="gallery-nav-bar once-in">
+                <footer className="gallery-footer once-in">
                     <div
                         onClick={() => setMenuIsOpen(!menuIsOpen)}
                         className="btn"
@@ -82,11 +82,11 @@ export default function Gallery() {
                             <span className="btn-text">
                                 <span className="btn-text-inner">
                                     {capitalizeWords(current)}
-                                </span>
+                                </span><span className={`triangle ${menuIsOpen ? "active" : ''}`}/>
                             </span>
                         </MagneticBtn>
                     </div>
-                </nav>
+                </footer>
             </main>
             <GalleryMenu
                 setMenuIsOpen={setMenuIsOpen}

@@ -17,16 +17,4 @@
         padding: calc(var(--gap-padding) / 1) calc(var(--gap-padding) * 0.5)
             calc(var(--gap-padding) / 1) calc(var(--gap-padding) * 0.33);
     }
-
-    .nav-bar .links-wrap li {
-        display: none;
-    }
-
-    .nav-bar .links-wrap li:last-child {
-        display: block;
-    }
-}
-
-.logo {
-    mix-blend-mode: multiply;
 }

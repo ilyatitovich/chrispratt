@@ -8,7 +8,11 @@ export default function Preloader({ text, dot = true }) {
 
     useEffect(() => {
         if (preloaderRef.current) {
-            initPreloader();
+            const tl = initPreloader();
+
+            return () => {
+                tl.kill();
+            }
         }
     }, [preloaderRef]);
 

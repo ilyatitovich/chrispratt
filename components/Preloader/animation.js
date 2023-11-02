@@ -74,4 +74,6 @@ export function initPreloader() {
         },
         "=-.8"
     );
+
+    return tl;
 }

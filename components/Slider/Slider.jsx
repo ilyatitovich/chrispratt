@@ -5,11 +5,9 @@ import "./slider.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-import { getImages } from "../ImagesGrid/data";
+import { images } from "../ImagesGrid/data";
 import MagneticBtn from "../MagneticBtn/MagneticBtn";
 import { v4 as uuidv4 } from "uuid";
-
-const images = getImages();
 
 export default function Slider({ setSliderIsOpen, initialSlide, current }) {
     const slides = images[current].map((img) => {
@@ -22,7 +20,10 @@ export default function Slider({ setSliderIsOpen, initialSlide, current }) {
 
     return (
         <div className="slider-modal">
-            <div className="btn btn-link btn-link-external" onClick={() => setSliderIsOpen(false)}>
+            <div
+                className="btn btn-link btn-link-external"
+                onClick={() => setSliderIsOpen(false)}
+            >
                 <MagneticBtn strength={20} strengthText={10}>
                     <span className="btn-text">
                         <span className="btn-text-inner">Close</span>

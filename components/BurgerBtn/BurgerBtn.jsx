@@ -4,7 +4,7 @@ import MagneticBtn from "../MagneticBtn/MagneticBtn";
 export default function BurgerBtn({ menuIsOpen, onClick }) {
     return (
         <div
-            className={`btn btn-hamburger show ${menuIsOpen ? "active" : ""}`}
+            className={`btn btn-hamburger ${menuIsOpen ? "active" : ""}`}
             onClick={onClick}
         >
             <MagneticBtn strength={50} strengthText={25}>

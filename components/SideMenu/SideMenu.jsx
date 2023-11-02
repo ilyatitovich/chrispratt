@@ -1,16 +1,27 @@
+import "./side-menu.css";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import MagneticBtn from "../MagneticBtn/MagneticBtn";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import { capitalizeWords } from "../utils";
 
 export default function SideMenu({ menuIsOpen }) {
+    const path = usePathname();
 
-    const navLinks = ["Home", "Gallery", "About", "Contact"].map((el, i) => {
+    const navLinks = ["home", "gallery", "about", "contact"].map((el, i) => {
         return (
-            <li key={el} className={`btn btn-link`}>
+            <li
+                key={el}
+                className={`btn btn-link ${
+                    path === "/" + (i > 0 ? el : "") ? "active" : ""
+                }`}
+            >
                 <MagneticBtn strength={24} strengthText={12}>
-                    <Link href={`/${i > 0 ? el.toLowerCase() : ""}`}>
+                    <Link href={`/${i > 0 ? el : ""}`}>
                         <span className="btn-text">
-                            <span className="btn-text-inner">{el}</span>
+                            <span className="btn-text-inner">
+                                {capitalizeWords(el)}
+                            </span>
                         </span>
                     </Link>
                 </MagneticBtn>

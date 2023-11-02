@@ -1,7 +1,5 @@
 import "./image-grid.css";
-import { getImages } from "./data";
-
-const images = getImages();
+import { images } from "./data";
 
 export default function ImageGrid({
     setSliderIsOpen,
@@ -12,7 +10,7 @@ export default function ImageGrid({
         return (
             <div
                 key={el.split("/").at(-1)}
-                className="design development interaction visible"
+                className="gallery-tile"
                 onClick={() => {
                     setSliderIsOpen(true);
                     setInitialSlide(i);
@@ -20,7 +18,7 @@ export default function ImageGrid({
             >
                 <img
                     style={{ position: "static" }}
-                    className="overlay overlay-image lazy"
+                    className="overlay overlay-image"
                     src={el}
                 />
             </div>
@@ -28,9 +26,9 @@ export default function ImageGrid({
     });
 
     return (
-        <section className="section work-tiles work-tiles-home once-in">
+        <section className="section gallery-tiles once-in">
             <div className="container">
-                <div className="image-grid">{links}</div>
+                <div className="images-grid">{links}</div>
             </div>
         </section>
     );

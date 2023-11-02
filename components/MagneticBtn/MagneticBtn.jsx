@@ -80,17 +80,6 @@ export default function MagneticBtn({
                 ease: Power2.easeInOut,
             });
         }
-        if (event.currentTarget.querySelector(".btn-text-inner.change")) {
-            gsap.to(
-                event.currentTarget.querySelector(".btn-text-inner.change"),
-                0.3,
-                {
-                    color: "#1C1D20",
-                    ease: Power3.easeOut,
-                    delay: 0.3,
-                }
-            );
-        }
     }
 
     return (

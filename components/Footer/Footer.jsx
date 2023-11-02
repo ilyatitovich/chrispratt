@@ -131,6 +131,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </footer>
+                <div className="overlay overlay-gradient" />
             </div>
         </>
     );

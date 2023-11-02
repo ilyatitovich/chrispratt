@@ -87,17 +87,7 @@
     transform: translate(0, 0) scale(1);
 }
 
-
-
 @media screen and (max-width: 540px) {
-    .loading-container .loading-words h2 {
-      padding-left: 0;
-   } 
-
-    .loading-container .dot {
-      display: none;
-   } 
-
     .loading-container .dot {
         top: 42%;
     }
