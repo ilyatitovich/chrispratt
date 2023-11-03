@@ -1,4 +1,6 @@
 .btn-hamburger {
+    position: fixed;
+    top: 2.5em;
     right: calc(var(--gap-padding) / 1.5);
     z-index: 105;
 }
@@ -24,8 +26,10 @@
     box-shadow: inset 0px 0px 0px 1px transparent !important;
 }
 
-.btn-hamburger .btn-fill {
-    background-color: var(--color-blue);
+@media screen and (min-wdth: 50em) {
+    .btn-hamburger .btn-fill {
+        background-color: var(--color-blue);
+    }
 }
 
 .btn-hamburger .btn-text-inner {
@@ -72,9 +76,13 @@
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.btn-hamburger.active .btn-click {
-    background-color: var(--color-blue);
+@media screen and (min-width: 50em) {
+    .btn-hamburger.active .btn-click {
+        background-color: var(--color-blue);
+    }
 }
+
+
 
 .btn-hamburger.active .btn-bars::after {
     top: 50%;

@@ -1,0 +1,10 @@
+.logo {
+    position: absolute;
+    top: 3em;
+    left: calc(var(--gap-padding) / 6);
+    z-index: 105;
+}
+
+.white {
+    color: var(--color-white);
+}

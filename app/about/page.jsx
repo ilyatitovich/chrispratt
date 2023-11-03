@@ -1,3 +1,4 @@
+import "./about.css";
 import Image from "next/image";
 import ScrollSection from "@/components/ScrollSection/ScrollSection";
 import Footer from "@/components/Footer/Footer";
@@ -8,11 +9,8 @@ export default function About() {
         <>
             <Preloader text="About" />
             <main className="main">
-                <div
-                    className="main-wrap"
-                    style={{ backgroundColor: "rgb(255, 255, 255)" }}
-                >
-                    <header className="section default-header about-header">
+                <div className="main-wrap">
+                    <header className="about-header">
                         <div className="container medium once-in">
                             <div className="row">
                                 <div className="flex-col">
@@ -102,9 +100,10 @@ export default function About() {
                                         >
                                             <p className="is-inview about-text on-scroll">
                                                 I capture moments for clients
-                                                worldwide.With each project, I&apos;m
-                                                driven to new heights, always
-                                                delivering exceptional quality.
+                                                worldwide.With each project,
+                                                I&apos;m driven to new heights,
+                                                always delivering exceptional
+                                                quality.
                                             </p>
                                         </ScrollSection>
                                     </div>

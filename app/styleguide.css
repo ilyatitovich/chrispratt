@@ -392,9 +392,9 @@ video.overlay {
     cursor: pointer;
 }
 
-.btn:hover {
+/* .btn:hover {
     z-index: 15;
-}
+} */
 
 .btn:last-child {
     margin-bottom: 0;
@@ -431,7 +431,6 @@ video.overlay {
 }
 
 .btn-fill {
-    background: var(--color-blue);
     position: absolute;
     width: 150%;
     height: 200%;
@@ -441,6 +440,12 @@ video.overlay {
     transform: translate3d(0, -76%, 0);
     will-change: transform;
     transition: background-color ease-in-out 0.25s;
+}
+
+@media screen and (min-width: 50em) {
+    .btn-fill {
+        background: var(--color-blue);
+    }
 }
 
 .btn-text {

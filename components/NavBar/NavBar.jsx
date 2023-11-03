@@ -2,8 +2,7 @@
 import "./nav-bar.css";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import MagneticBtn from "../MagneticBtn/MagneticBtn";
+import Logo from "../Logo/Logo";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import SideMenu from "../SideMenu/SideMenu";
 
@@ -18,19 +17,11 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className="nav-bar">
-                <div className="btn btn-link btn-left-top">
-                    <MagneticBtn strength={20} strengthText={10}>
-                        <Link href="/">
-                            <span className="btn-text logo">Chris Pratt</span>
-                        </Link>
-                    </MagneticBtn>
-                </div>
-                <BurgerBtn
-                    menuIsOpen={menuIsOpen}
-                    onClick={() => setMenuIsOpen(!menuIsOpen)}
-                />
-            </nav>
+            <Logo pathname={pathname} />
+            <BurgerBtn
+                menuIsOpen={menuIsOpen}
+                onClick={() => setMenuIsOpen(!menuIsOpen)}
+            />
             <SideMenu menuIsOpen={menuIsOpen} />
         </>
     );

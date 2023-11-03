@@ -1,30 +1,32 @@
 .home-header {
+    position: relative;
     min-height: 115vh;
     display: flex;
     align-items: center;
     background: var(--color-gray);
     overflow: hidden;
-}
-
-.home-header .personal-image-wrap {
-    height: 100%;
-    width: 100%;
-    display: block;
-    position: absolute;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 .home-header .personal-image {
+    position: absolute;
     top: -10%;
+    left: 0;
     width: 100%;
     height: 110%;
     background: var(--color-dark-dark);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .home-header .personal-image img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
 }
 
 .home-header .container {
@@ -58,8 +60,12 @@
     display: block;
 }
 
-.home-header .get-height {
+.hanger-container {
+    width: 100%;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .home-header .hanger {
@@ -132,14 +138,6 @@
         height: 105%;
     }
 
-    .home-header .big-name {
-        position: absolute;
-        bottom: calc(var(--vh, 1vh) * 33);
-        left: 0;
-        width: 100%;
-        padding-bottom: calc(var(--gap-padding) * 1.25);
-    }
-
     .home-header .row {
         justify-content: flex-start;
     }
@@ -173,9 +171,10 @@
     }
 }
 
-/* ------------------------- Home - Intro -------------------------------------------------- */
-
 .home-intro {
+    display: block;
+    position: relative;
+    padding-top: var(--section-padding);
     padding-bottom: calc(var(--section-padding) * 0.66);
 }
 
@@ -240,16 +239,24 @@
 
 /* ------------------------- Work Tiles -------------------------------------------------- */
 
-.work-tiles {
+.work-tiles-home-home {
+    position: relative;
     padding-top: 0;
+    padding-bottom: 0;
 }
 
-.work-tiles .container {
+@media screen and (max-width: 1024px) {
+    .work-tiles-home-home + .center-grid-btn {
+        padding-top: 0;
+    }
+}
+
+.work-tiles-home .container {
     padding-left: calc(var(--container-padding) * 0.75);
     padding-right: calc(var(--container-padding) * 0.75);
 }
 
-.work-tiles ul {
+.work-tiles-home ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -257,97 +264,66 @@
     padding-top: var(--gap-padding);
 }
 
-.work-tiles ul li {
+.work-tiles-home ul li {
     cursor: pointer;
     display: block;
     height: auto;
     width: 50%;
     position: relative;
     overflow: hidden;
-    height: 0;
-    width: 0;
     transform: translateY(0%) rotate(0.001deg) scale(1);
     transition: opacity 0.3s ease-in 0.4s,
         transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.work-tiles ul li.visible {
-    height: auto;
-    width: 50%;
-}
-
-.work-tiles ul li.tile-fade-out {
-    opacity: 0;
-    transform: translateY(5em) rotate(0.001deg);
-    transition: opacity 0.25s ease-out, transform 0s linear 0.3s;
-}
-
-.work-tiles ul li.tile-fade-in {
-    opacity: 1;
-    transform: translateY(5em) rotate(0.001deg) scale(1);
-}
-
-.work-tiles ul li .single-tile-wrap {
+.work-tiles-home ul li .single-tile-wrap {
     width: 100%;
     padding-bottom: calc(var(--section-padding) - 6em);
     padding-left: calc(var(--container-padding) * 0.25);
     padding-right: calc(var(--container-padding) * 0.25);
 }
 
-.work-tiles ul li a {
+.work-tiles-home ul li a {
     align-items: center;
     color: unset;
     text-decoration: unset;
     overflow: hidden;
 }
 
-.work-tiles ul li a .flex-col:nth-child(1) {
+.work-tiles-home ul li a .flex-col:nth-child(1) {
     width: 100%;
     padding-bottom: var(--gap-padding);
 }
 
-.work-tiles ul li a .flex-col:nth-child(2) {
+.work-tiles-home ul li a .flex-col:nth-child(2) {
     width: 100%;
     padding-bottom: calc(var(--gap-padding) / 2);
 }
 
-.work-tiles ul li a .stripe {
-    margin-top: calc(var(--gap-padding) / 2);
-}
-
-.work-tiles ul li a .flex-col:nth-child(3) {
-    width: 70%;
-}
-
-.work-tiles ul li a .flex-col:nth-child(4) {
-    width: 30%;
-    text-align: right;
-}
-
-.work-tiles ul li a .tile-image {
+.work-tiles-home ul li a .tile-image {
     width: 100%;
     position: relative;
     background: var(--color-lightgray);
     overflow: hidden;
 }
 
-.work-tiles ul li a .tile-image .overlay-image {
+.work-tiles-home ul li a .tile-image .overlay-image {
     transform: scale(1) rotate(0.001deg);
     transition: var(--animation-primary);
     will-change: transform;
 }
 
-.work-tiles ul li a:hover .tile-image .overlay-image {
+.work-tiles-home ul li a:hover .tile-image .overlay-image {
     transform: scale(1.025) rotate(0.001deg);
 }
 
-.work-tiles ul li a .tile-image::before {
+.work-tiles-home ul li a .tile-image::before {
     display: block;
     content: "";
     padding-top: 100%;
 }
 
-.work-tiles ul li a h4 {
+.work-tiles-home ul li a h4 {
     position: relative;
     display: block;
     overflow: hidden;
@@ -357,55 +333,50 @@
     margin: 0;
 }
 
-.work-tiles ul li a h4 span {
-    position: relative;
-    display: block;
-    padding: 0.1em 0;
-}
-
 @media screen and (max-width: 1024px) {
-    .work-tiles ul li a h4 {
+    .work-tiles-home ul li a h4 {
         font-size: calc(clamp(1.75em, 2.3vw, 2.5em) * 1.125);
     }
 }
 
 @media screen and (max-width: 620px) {
-    .work-tiles ul li.visible {
+    .work-tiles-home ul li {
         width: 100%;
     }
 
-    .work-tiles .container {
+    .work-tiles-home .container {
         padding-left: var(--container-padding);
         padding-right: var(--container-padding);
     }
 
-    .work-tiles ul li .single-tile-wrap {
+    .work-tiles-home ul li .single-tile-wrap {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .work-tiles ul li a:hover .tile-image .overlay-image {
+    .work-tiles-home ul li a:hover .tile-image .overlay-image {
         transform: scale(1) rotate(0.001deg);
     }
 
-    .work-tiles ul li a .flex-col:nth-child(2) {
+    .work-tiles-home ul li a .flex-col:nth-child(2) {
         width: 100%;
         padding-bottom: calc(var(--section-padding) / 6);
     }
-
-    .work-tiles ul li a .stripe {
-        margin-top: calc(var(--section-padding) / 6);
-    }
 }
 
-/* ------------------------- Work Tiles - Home -------------------------------------------------- */
-
-.work-tiles-home {
-    padding-bottom: 0;
+.gallery-btn {
+    display: block;
+    position: relative;
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
 }
 
-@media screen and (max-width: 1024px) {
-    .work-tiles-home + .center-grid-btn {
-        padding-top: 0;
-    }
+.gallery-btn .container {
+    display: flex;
+    justify-content: center;
 }
+
+.gallery-btn .btn-text {
+    min-width: 10em;
+}
+
