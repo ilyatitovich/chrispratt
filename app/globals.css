@@ -1,0 +1,24 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width: 30em) {
+    ::-webkit-scrollbar {
+        display: unset;
+        width: 0.4em;
+        background-color: none;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-dark-dark);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-dark);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-white);
+}

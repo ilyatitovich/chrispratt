@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./normalize.css";
 import "./styleguide.css";
+import "./globals.css";
 import "./components.css";
 import "./style-new.css";
 
